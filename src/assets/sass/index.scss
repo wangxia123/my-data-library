@@ -1,4 +1,4 @@
-$baseFontSize: 108px;
+$baseFontSize: 75px;
 $base-font-color: #787886;
 $base-bg-color: #f7f8f8;
 
@@ -13,7 +13,7 @@ $base-bg-color: #f7f8f8;
 }
 
 body {
-  background: $base-bg-color;
+  background-color: rgb(250, 236, 238);
 }
 
 input, button, a {
@@ -50,5 +50,105 @@ input::-webkit-input-placeholder {
 
 #app {
   width: 100vw;
-  overflow: hidden;
+  height: 100vh;
+  // overflow: hidden;
+}
+.content{
+  padding:5%;
+  height: 100vh;
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    .imgs{
+      width: rem(80);
+      height: rem(80);
+      border-radius: 50%;
+    }
+    .title{
+      font-size: rem(45);
+      color: #ffffff;
+      text-align: center;
+    }
+    .icon{
+      font-size: rem(45);
+      color: pink;
+    }
+  }
+
+  .nav{
+    width: 100%;
+    height: rem(100);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(241, 197, 197, 0.5);
+    color: #ffffff;
+    font-size: rem(35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 3%;
+
+    .return{
+      left: 4%;
+      position: absolute;
+      color: #ffffff;
+
+      i{
+        font-size: rem(45);
+      }
+    }
+  }
+
+  .list{
+    margin-top: 17%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li{
+      a{
+        display: inline-block;
+        width: rem(180);
+        height: rem(180);
+        border-radius: 50%;
+        border: 1px solid #ecb2b1;
+        margin: 2%;
+      }
+      p{
+        text-align: center;
+        margin-bottom: 10px;
+        color:#f89898;
+        i{
+          padding-right: 2%;
+        }
+      }
+    }
+  }
+}
+
+
+.bt {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #806e71;
+  opacity: 0.9;
+  border-radius: rem(50);
+  width:rem(320);
+  height:rem(70);
+  margin: rem(50) auto 0;
+  bottom: 3%;
+  .btn{
+    display: inline-block;
+    text-align: center;
+    color: #ecb2b1;
+    font-size: rem(33);
+    line-height: rem(70);
+    letter-spacing: 2.4px;
+    // padding: 5px 36px;
+  }
 }
