@@ -1,0 +1,54 @@
+$baseFontSize: 108px;
+$base-font-color: #787886;
+$base-bg-color: #f7f8f8;
+
+@function rem($px) {
+  @return $px * 1px / $baseFontSize * 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $base-bg-color;
+}
+
+input, button, a {
+  outline: none;
+}
+
+button, input, select, textarea, h1, h2, h3, h4 {
+  font-size: 100%;
+  vertical-align: middle
+}
+
+em, i {
+  font-style: normal
+}
+
+ol, ul, li {
+  list-style: none
+}
+
+img, fieldset {
+  border: 0;
+  vertical-align: middle
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  outline: none
+}
+
+input::-webkit-input-placeholder {
+  color: #e5ded1;
+}
+
+#app {
+  width: 100vw;
+  overflow: hidden;
+}
