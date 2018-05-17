@@ -1,6 +1,6 @@
 <template>
   <div class="journey">
-    <div class="">lvyou</div>
+    <div class=""><a href="http://www.mafengwo.cn/poi/1353227.html">去大象山</a></div>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 
 <style lang="scss" scoped>
   .journey{
-    background: url(/static/img/bg.20afd04.png) no-repeat top center;
+    background: url(/static/img/bg-j.jpg) no-repeat top center;
     background-size: cover;
     height:100vh;
   }
