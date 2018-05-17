@@ -6,6 +6,7 @@ import home from '../components/home'
 import food from '../components/food'
 import celebrity from '../components/celebrity'
 import journey from '../components/journey'
+import lanzhou from '../components/lanzhou'
 
 Vue.use(Router)
 
@@ -17,7 +18,7 @@ export default new Router({
       component: index
     },
     {
-      path: '/trip',
+      path: '/trip/',
       name: 'trip',
       component: trip
     },
@@ -40,6 +41,11 @@ export default new Router({
       path: '/journey',
       name: 'journey',
       component: journey
-    }
+    },
+    {
+      path: '/lanzhou',
+      name: 'lanzhou',
+      component: lanzhou
+    },
   ]
 })

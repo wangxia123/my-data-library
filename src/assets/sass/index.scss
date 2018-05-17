@@ -135,13 +135,10 @@ input::-webkit-input-placeholder {
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #806e71;
-  opacity: 0.9;
   border-radius: rem(50);
   width:rem(320);
   height:rem(70);
   margin: rem(50) auto 0;
-  bottom: 3%;
   .btn{
     display: inline-block;
     text-align: center;
@@ -150,5 +147,18 @@ input::-webkit-input-placeholder {
     line-height: rem(70);
     letter-spacing: 2.4px;
     // padding: 5px 36px;
+  }
+}
+.bt1{
+  background-color: #806e71;
+  bottom: 3%;
+  opacity: 0.9;
+}
+.bt2{
+  background-color: #ffffff;
+  bottom: 5%;
+  opacity: 0.7;
+  .btn{
+    color: #201f1f;
   }
 }

@@ -6,8 +6,8 @@
         <p class="title">{{ message }}</p>
         <p class="icon">❀</p>
       </div>
-      <div class="bt">
-        <router-link to="/trip" class="btn">♥走进甘谷♥</router-link>
+      <div class="bt bt1">
+        <router-link to="/trip/food:123" class="btn" v-text="msg"></router-link>
       </div>
     </div>
   </div>
@@ -18,7 +18,8 @@ export default {
   name: 'index',
   data () {
     return {
-      message: 'Welcome come to our hometown!'
+      message: 'Welcome come to our hometown!',
+      msg: '♥走进甘谷♥'
     }
   }
 }

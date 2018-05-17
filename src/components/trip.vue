@@ -19,7 +19,7 @@
         <li><router-link to="/"></router-link><p><i class="iconfont icon-1"></i>武山</p></li>
         <li><router-link to="/"></router-link><p><i class="iconfont icon-food"></i>秦安</p></li>
         <li><router-link to="/"></router-link><p><i class="iconfont icon-food"></i>庆阳</p></li>
-        <li><router-link to="/"></router-link><p><i class="iconfont icon-food"></i>兰州</p></li>
+        <li><router-link to="/lanzhou"></router-link><p><i class="iconfont icon-food"></i>兰州</p></li>
         <li><router-link to="/"></router-link><p><i class="iconfont icon-food"></i>qqqq</p></li>
       </ul>
     </div>
