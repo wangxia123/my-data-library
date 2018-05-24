@@ -7,6 +7,8 @@ import food from '../components/food'
 import celebrity from '../components/celebrity'
 import journey from '../components/journey'
 import lanzhou from '../components/lanzhou'
+import content from '../components/content'
+import liyu from '../components/liyu'
 
 Vue.use(Router)
 
@@ -18,7 +20,17 @@ export default new Router({
       component: index
     },
     {
-      path: '/trip/',
+      path: '/content',
+      name: 'content',
+      component: content
+    },
+    {
+      path: '/liyu',
+      name: 'liyu',
+      component: liyu
+    },
+    {
+      path: '/trip',
       name: 'trip',
       component: trip
     },
@@ -47,5 +59,10 @@ export default new Router({
       name: 'lanzhou',
       component: lanzhou
     },
+    {
+      path: '/lanzhou/:id',
+      name: 'lanzhou',
+      component: lanzhou
+    }
   ]
 })

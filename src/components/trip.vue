@@ -26,7 +26,7 @@
           <p><i class="iconfont icon-wenhua"></i>甘谷文化</p>
         </li>
         <li>
-          <router-link to="/"></router-link>
+          <router-link to="/liyu"></router-link>
           <p><i class="iconfont icon-food"></i>甘谷俚语</p>
         </li>
         <li>
@@ -40,7 +40,7 @@
           <p><i class="iconfont icon-food"></i>甘谷风俗</p>
         </li>
         <li>
-          <router-link to="/"></router-link>
+          <router-link to="/content"></router-link>
           <p><i class="iconfont icon-food"></i>天水</p>
         </li>
         <li>
@@ -71,14 +71,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'trip',
-    data() {
-      return {
-        msg: '选择你喜欢的东西吧！'
-      }
+export default {
+  name: 'trip',
+  data () {
+    return {
+      msg: '选择你喜欢的东西吧！'
     }
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
