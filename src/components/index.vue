@@ -7,7 +7,7 @@
         <p class="icon">❀</p>
       </div>
       <div class="bt bt1">
-        <router-link to="/trip/food:123" class="btn" v-text="msg"></router-link>
+        <router-link to="/trip" class="btn" v-text="msg"></router-link>
       </div>
     </div>
   </div>

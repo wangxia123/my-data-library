@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
   .journey{
-    background: url('../assets/images/bg-j.jpg') no-repeat top center;
+    background: url('https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike272%2C5%2C5%2C272%2C90/sign=bd1a4b6fb312c8fca0fefe9f9d6af920/34fae6cd7b899e51c022035b48a7d933c9950dd4.jpg') no-repeat top center;
     background-size: cover;
     height:100vh;
   }
