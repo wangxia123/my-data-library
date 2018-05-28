@@ -62,7 +62,7 @@
           <p><i class="iconfont icon-food"></i>兰州</p>
         </li>
         <li>
-          <router-link to="/"></router-link>
+          <router-link to="/lianxi"></router-link>
           <p><i class="iconfont icon-food"></i>qqqq</p>
         </li>
       </ul>

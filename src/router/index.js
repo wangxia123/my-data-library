@@ -9,6 +9,7 @@ import journey from '../components/journey'
 import lanzhou from '../components/lanzhou'
 import content from '../components/content'
 import liyu from '../components/liyu'
+import lianxi from '../components/lianxi'
 
 Vue.use(Router)
 
@@ -63,6 +64,11 @@ export default new Router({
       path: '/lanzhou/:id',
       name: 'lanzhou',
       component: lanzhou
+    },
+    {
+      path: '/lianxi',
+      name: 'lianxi',
+      component: lianxi
     }
   ]
 })
