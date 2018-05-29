@@ -67,13 +67,13 @@ export default {
       seen: true,
       count1: 0,
       count2: 0,
-      picked:'',
+      picked: '',
       selected: '',
       todos: [
-        {text: "hello"},
-        {text: "hello"},
-        {text: "hello"},
-        {text: "hello"}
+        {text: 'hello'},
+        {text: 'hello'},
+        {text: 'hello'},
+        {text: 'hello'}
       ]
     }
   },

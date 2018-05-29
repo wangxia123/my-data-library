@@ -8,8 +8,9 @@ import celebrity from '../components/celebrity'
 import journey from '../components/journey'
 import lanzhou from '../components/lanzhou'
 import content from '../components/content'
-import liyu from '../components/liyu'
+import testVue from '../components/testVue'
 import lianxi from '../components/lianxi'
+import todo from '../components/todo'
 
 Vue.use(Router)
 
@@ -26,9 +27,9 @@ export default new Router({
       component: content
     },
     {
-      path: '/liyu',
-      name: 'liyu',
-      component: liyu
+      path: '/testVue',
+      name: 'testVue',
+      component: testVue
     },
     {
       path: '/trip',
@@ -69,6 +70,11 @@ export default new Router({
       path: '/lianxi',
       name: 'lianxi',
       component: lianxi
+    },
+    {
+      path: '/todo',
+      name: 'todo',
+      component: todo
     }
   ]
 })

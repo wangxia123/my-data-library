@@ -26,8 +26,8 @@
           <p><i class="iconfont icon-wenhua"></i>甘谷文化</p>
         </li>
         <li>
-          <router-link to="/liyu"></router-link>
-          <p><i class="iconfont icon-food"></i>甘谷俚语</p>
+          <router-link to="/testVue"></router-link>
+          <p><i class="iconfont icon-food"></i>练习vue</p>
         </li>
         <li>
           <router-link to="/journey">
@@ -44,8 +44,8 @@
           <p><i class="iconfont icon-food"></i>天水</p>
         </li>
         <li>
-          <router-link to="/"></router-link>
-          <p><i class="iconfont icon-1"></i>武山</p>
+          <router-link to="/todo"></router-link>
+          <p><i class="iconfont icon-1"></i>todo</p>
         </li>
         <li>
           <router-link to="/"></router-link>
@@ -63,7 +63,7 @@
         </li>
         <li>
           <router-link to="/lianxi"></router-link>
-          <p><i class="iconfont icon-food"></i>qqqq</p>
+          <p><i class="iconfont icon-food"></i>lianxi-vue</p>
         </li>
       </ul>
     </div>
