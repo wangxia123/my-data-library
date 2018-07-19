@@ -1,12 +1,10 @@
 <template>
   <div class="home">
-    <input type="text" v-model="todo" @keyup.enter="enter">
-    <ul v-bind="{ 'red':red }">
-      <li v-for="(item, index) in todos" :key="index">
-        <input type="checkbox" @click="addTodo(index)" v-model="red">
-        <span v-text="item" v-bind:class="my"></span>
-        <!-- {{ item }} -->
-        <button @click="delTodo(index)">del</button>
+    <h1>{{title}}</h1>
+    <input type="text" v-model="newItem" @keyup.enter="addNew">
+    <ul>
+      <li v-for="item in items" @click="toggleFinish(item)" :class="{finished: item.isFinished}">
+        {{ item.label }}
       </li>
     </ul>
   </div>
@@ -17,34 +15,48 @@ export default {
   name: 'todo',
   data () {
     return {
-      red: false,
-      my: false,
-      todo:'',
-      todos: []
+      title: 'This is todo list',
+      items: [
+        {
+          label: 'play',
+          isFinished: true
+        }
+      ],
+      newItem: ''
     }
   },
   methods: {
-    enter: function () {
-      this.todos.push(this.todo)
-      this.todo = ''
+    toggleFinish: function (item) {
+      item.isFinished = !item.isFinished
     },
-
-    delTodo (index) {
-      this.todos.splice(index, 1)
-    },
-
-    addTodo (index) {
-      this.todos.indexOf(1)
+    addNew: function () {
+      this.items.push({
+        label: this.newItem,
+        isFinished: false
+      })
+      this.newItem = ''
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.red{
-  color:red;
-}
-.my{
-  color:#ccc;
-}
+  .finished {
+    color: #ccc;
+    font-size: 20px;
+  }
+  h1{
+    width: 80%;
+    margin:10% auto;
+    text-align: center;
+  }
+  input {
+    width: 80%;
+    margin: auto 10%;
+    text-align: center;
+  }
+  li {
+    width: 80%;
+    margin:5% auto;
+  }
 </style>
