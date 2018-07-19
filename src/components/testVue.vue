@@ -2,7 +2,7 @@
   <div class="test">
     <h1>{{ good }}</h1>
     <input type="text" v-model="good"><br>
-    <button v-on:click="count++">点击{{ count+10000000000 }}</button><br>
+    <button v-on:click="count++">点击   {{ count+10000000000 }}</button><br>
     <button>{{ doThis }}</button>
     <ol>
       <li v-for="item in items"
@@ -12,7 +12,7 @@
           v-bind:title="item.title">{{ item.title }}</li>
     </ol>
     <div v-bind:class="{ 'red':red }">
-      <label for="">点击给你惊喜有</label>
+      <label for="">点击给你惊喜→↑→↑→↑→↑→↑→↑→↑→</label>
       <input type="checkbox" name="" id="" v-model="red">
     </div>
     <div @click="open" v-for="list in lists" v-bind:class="{ finished : list.isFinished }">{{ list }}</div>

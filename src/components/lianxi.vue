@@ -24,7 +24,8 @@
     </ol>
 
     <button @click="count1 += 1">change it</button>
-    <span>The button above has been clicked {{ count1 }} times.</span><br>
+    <span>The button above has been clicked {{ count1 }} times.</span>
+    <br>
     <button @click="count2 -= 1">change it</button>
     <span>{{ '数字递减' + count2 }}</span>
 
@@ -53,38 +54,44 @@
         <span>请选择：{{ selected }}</span>
       </div>
     </h1>
+    <div>{{ message }}</div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'test',
-  data () {
-    return {
-      message: '<h1>hello world!</h1>',
-      hello: 'ni zhe ge ben dan!',
-      big: 'we are good friend!',
-      seen: true,
-      count1: 0,
-      count2: 0,
-      picked: '',
-      selected: '',
-      todos: [
-        {text: 'hello'},
-        {text: 'hello'},
-        {text: 'hello'},
-        {text: 'hello'}
-      ]
-    }
-  },
-  methods: {
-    myself: function () {
-      alert('I love you！！！嗯哼！'+ new Date().toLocaleString())
+  export default {
+    name: 'test',
+    data() {
+      return {
+        message: '<h1>hello world!</h1>',
+        hello: 'ni zhe ge ben dan!',
+        big: 'we are good friend!',
+        seen: true,
+        count1: 0,
+        count2: 0,
+        picked: '',
+        selected: '',
+        todos: [
+          { text: 'hello' },
+          { text: 'hello' },
+          { text: 'hello' },
+          { text: 'hello' }
+        ]
+      }
+    },
+    methods: {
+      myself: function () {
+        alert('I love you！！！嗯哼！' + new Date().toLocaleString())
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
-
+  div {
+    margin-top: 5%;
+  }
+  div:first-child {
+    margin: 0;
+  }
 </style>
