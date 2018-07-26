@@ -1,15 +1,15 @@
 <template>
-  <div class="content">
+  <div class="content1">
     <div v-show="page === 'page1'" class="page page1">
       <div class="code"></div>
       <div class="up1">
-        <ul class="number">
+        <ul class="number"><!--选择的数字 -->
           <li
             v-for="(code, index) in codes"
             :key="index"
           >{{code}}</li>
         </ul>
-        <ul class="exchange">
+        <ul class="exchange"><!--被选择的数字 -->
           <li
             :key="number"
             v-for="number in keyNumbers"
