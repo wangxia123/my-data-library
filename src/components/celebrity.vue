@@ -65,7 +65,7 @@
       handleClickConfirmNumber () {
         const codes = this.codes
         if (fillCodes <= 7) {
-          alert('请填完兑换码')
+          alert('请填完8位兑换码')
         }else{
         this.$router.push('home')
       }
