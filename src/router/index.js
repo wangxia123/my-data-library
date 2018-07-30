@@ -11,7 +11,6 @@ import content from '../components/content'
 import testVue from '../components/testVue'
 import lianxi from '../components/lianxi'
 import todo from '../components/todo'
-// import my-component from '../components/myComponent'
 
 Vue.use(Router)
 
@@ -27,11 +26,6 @@ export default new Router({
       name: 'content',
       component: content
     },
-    // {
-    //   path: '/my-component',
-    //   name: 'myComponent',
-    //   component: myComponent
-    // },
     {
       path: '/testVue',
       name: 'testVue',

@@ -30,16 +30,15 @@
     <span>{{ '数字递减' + count2 }}</span>
 
     <h1 id="example-4">
+      <span>Picked: {{ picked }}</span></br>
       <input type="radio" id="one" value="One" v-model="picked">
       <label for="one">One</label>
       <br>
       <input type="radio" id="two" value="Two" v-model="picked">
       <label for="two">Two</label>
-      <br>
-      <span>Picked: {{ picked }}</span>
 
       <div class="my">
-        <select v-model="selected">
+        <select v-model="selected" style="background-color: transparent;">
           <option value="">请选择:我喜欢的小孩是：</option>
           <option>王康康</option>
           <option>王彤彤</option>
@@ -88,6 +87,12 @@
 </script>
 
 <style lang="scss" scoped>
+  .test {
+    padding: 10%;
+  }
+  #example-4 {
+    margin-top: 5%;
+  }
   div {
     margin-top: 5%;
   }
