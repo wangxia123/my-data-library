@@ -1,17 +1,110 @@
 @charset "utf-8";
 
-$baseFontSize: 75px;
-$base-font-color: #787886;
-$base-bg-color: #f7f8f8;
+// 基本字体大小，取值为设计稿的1/10
+$fontBase: 75px;
+$windowWidth: 750px;
+$windowHeight: 1206px;
 
-@function rem($px) {
-  @return $px * 1px / $baseFontSize * 1rem;
+@function rem ($px) {
+  @return $px * 1px / $fontBase * 1rem;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@function pxToVw ($width) {
+  @return $width * 1px / $windowWidth * 100vw;
+}
+
+@function pxToVh ($height) {
+  @return $height * 1px / $windowHeight * 100vh;
+}
+
+@mixin size($width, $height) {
+  width: rem($width);
+  height: rem($height);
+}
+
+// flexbox-centering
+@mixin flexbox-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// grid centering
+@mixin grid-centering {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexbox-centering1 {
+  display: flex;
+  justify-content: center;
+}
+// truncate text 文字超出隐藏，显示为...
+@mixin truncate-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 120px;
+}
+
+// 圆角
+@mixin circle {
+  border-radius: 50%;
+}
+
+%select {
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  outline: none;
+}
+
+%mCenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%posCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+%bg-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+%bg-contain {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+%button {
+  border: none;
+  outline: none;
+}
+
+%input {
+  background-color: transparent;
+  border: 1px solid #b0b0b0;
+  padding: 0 rem(27);
+  color: #a1a1a1;
 }
 
 body {
@@ -236,7 +329,7 @@ html,body,h1,ul,li{
   list-style: none;
 }
 
-.page{
+.page{position: relative;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -341,3 +434,408 @@ html,body,h1,ul,li{
     background-size: contain;
   }
 }
+
+.page {
+  @include flexbox-centering;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  @include size(320, 63);
+  background-color: #fff;
+  @extend %button;
+  font-size: rem(36);
+  @include flexbox-centering;
+}
+.btn1{
+  margin: rem(122) auto rem(30);
+  letter-spacing: 2px;
+}
+.btn2{
+  margin: rem(156) auto 0;
+  letter-spacing: 10px;
+}
+.btn3{
+  margin: rem(125) auto 0;
+  letter-spacing: 10px;
+}
+.btn4{
+  margin: rem(28) auto 0;
+  letter-spacing: 10px;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid #b0b0b0;
+  padding: 0 5%;
+  color: #a1a1a1;
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  outline: none;
+}
+
+.logo {
+  margin: auto;
+  @extend %bg-contain;
+  background-image: url(../images/logo.png);
+}
+.logo1 {
+  @include size(243, 304);
+}
+.logo2 {
+  @include size(186, 233);
+}
+// page1 start
+.page1 {
+  @extend %bg;
+  background-image: url(../images/bg1.jpg);
+
+  .page1-content {
+    @extend %posCenter;
+    top: rem(159);
+
+    .page1-text {
+      margin: rem(60) auto 0;
+      @include size(372, 328);
+      @extend %bg-contain;
+      background-image: url(../images/page1-text.png);
+    }
+
+    .privilege-text {
+      margin: auto;
+      @include size(455, 26);
+      @extend %bg-contain;
+      background-image: url(../images/privilege-text.png);
+    }
+  }
+}
+// page1 end
+
+// page2 start
+.page2 {
+  @extend %bg;
+  background-image: url(../images/bg2.jpg);
+
+  .page2-content {
+    @extend %posCenter;
+    top: rem(198);
+
+    .page2-title {
+      margin: auto;
+      @include size(428, 123);
+      @extend %bg-contain;
+      background-image: url(../images/trip-title.png);
+    }
+
+    .page2-enter {
+      margin:rem(110) auto 0;
+      @include size(346, 83);
+      @extend %bg-contain;
+      background-image: url(../images/binding-new-member.png);
+    }
+  }
+
+  .page2-form {
+    width: rem(566);
+    margin: rem(78) auto 0;
+
+    .input-number {
+      @include size(566, 63);
+      @extend %input;
+    }
+  }
+
+  .page2-code {
+    margin-top: rem(30);
+    display: flex;
+    justify-content: space-between;
+
+    .input-code {
+      @extend %input;
+      @include size(360, 63);
+    }
+    .code {
+      @include size(198, 63);
+      background-color: #aaaaaa;
+      color: #fff;
+      font-size: rem(30);
+      @include flexbox-centering;
+    }
+  }
+}
+
+.page2-agree {
+  margin-top: rem(22);
+  @include flexbox-centering1;
+
+  .page2-checkbox {
+    @include size(22, 14);
+  }
+  .page2-protocol {
+    @include size(540, 34);
+    @extend %bg-contain;
+    background-image: url(../images/protocol.png);
+  }
+
+  .label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+// page2 end
+
+// page3 start
+.page3 {
+  @extend %bg;
+  background-image: url(../images/bg3.jpg);
+
+  .page3-content {
+    @extend %posCenter;
+    top: rem(141);
+  }
+
+  .page3-form {
+    width: rem(568);
+    margin: rem(49) auto 0;
+
+    .page3-input1 {
+      @extend %input;
+      @include size(568, 66);
+    }
+
+    .page3-input2 {
+      margin-top: rem(28);
+      @extend %input;
+      @include size(568, 66);
+    }
+
+    .page3-select1 {
+      margin-top: rem(28);
+      padding:0 5%;
+      @include size(568, 66);
+      @extend %bg-contain;
+      background-image: url(../images/select-gender.png);
+      color: #a6a6a6;
+    }
+  }
+
+  .page3-group1,.page3-group2 {
+    margin-top: rem(28);
+    @include flexbox-centering;
+
+    select {
+      padding:0 rem(27);
+      color: #a6a6a6;
+    }
+
+    .select1 {
+      @include size(130, 64);
+      @extend %bg-contain;
+      background-image: url(../images/select-date.png);
+    }
+
+    .select2 {
+      @include size(233, 64);
+      @extend %bg-contain;
+      background-image: url(../images/select-time.png);
+    }
+
+    span {
+      color: #fff;
+      font-size: rem(29);
+      margin: 0 rem(23) 0 rem(15);
+    }
+  }
+  .page3-group1 {
+    margin-left: 5px;
+  }
+  .page3-group2 {
+    margin-left: 11px;
+  }
+
+  .group1,.group2,.group3 {
+    width: 34.333%;
+    @include flexbox-centering;
+
+    // span:last-child {
+    //   margin: 0 0 0 rem(25);
+    // }
+  }
+
+  .group4,.group5 {
+    width: 53%;
+    @include flexbox-centering;
+  }
+}
+// page3 end
+
+// page4 start
+.page4 {
+  @extend %bg;
+  background-image: url(../images/bg4.jpg);
+
+  .page4-content {
+    @extend %posCenter;
+    top: rem(89);
+  }
+
+  .page4-glass {
+    margin: rem(46) rem(116) 0;
+  }
+
+  .page4-text {
+    margin: auto;
+    @include size(298, 57);
+    @extend %bg-contain;
+  }
+
+  .page4-text1 {
+    background-image: url(../images/select-style-label.png);
+  }
+
+  .page4-text2 {
+    background-image: url(../images/select-type-label.png);
+  }
+
+  .page4-imgs {
+    margin: rem(17) auto rem(23);
+    width: rem(400);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .q,.n {
+    @include size(131, 131);
+    @extend %bg-contain;
+  }
+
+  .q1 {
+    background-image: url(../images/q1.png);
+
+    &.active {
+      background-image: url(../images/q1-active.png);
+    }
+  }
+  .q2 {
+    background-image: url(../images/q2.png);
+    &.active {
+      background-image: url(../images/q2-active.png);
+    }
+  }
+  .q3 {
+    background-image: url(../images/q3.png);
+    &.active {
+      background-image: url(../images/q3-active.png);
+    }
+  }
+  .q4 {
+    background-image: url(../images/q4.png);
+    &.active {
+      background-image: url(../images/q4-active.png);
+    }
+  }
+  .q5 {
+    background-image: url(../images/q5.png);
+    &.active {
+      background-image: url(../images/q5-active.png);
+    }
+  }
+  .q6 {
+    background-image: url(../images/q6.png);
+    &.active {
+      background-image: url(../images/q6-active.png);
+    }
+  }
+
+  .n1 {
+    background-image: url(../images/n1.png);
+    &.active {
+      background-image: url(../images/n1-active.png);
+    }
+  }
+  .n2 {
+    background-image: url(../images/n2.png);
+    &.active {
+      background-image: url(../images/n2-active.png);
+    }
+  }
+  .n3 {
+    background-image: url(../images/n3.png);
+    &.active {
+      background-image: url(../images/n3-active.png);
+    }
+  }
+  .n4 {
+    background-image: url(../images/n4.png);
+    &.active {
+      background-image: url(../images/n4-active.png);
+    }
+  }
+  .n5 {
+    background-image: url(../images/n5.png);
+    &.active {
+      background-image: url(../images/n5-active.png);
+    }
+  }
+  .n6 {
+    background-image: url(../images/n6.png);
+    &.active {
+      background-image: url(../images/n6-active.png);
+    }
+  }
+}
+// page4 end
+
+// page5 start
+.page5 {
+  @extend %bg;
+  background-image: url(../images/bg5.jpg);
+
+  .page5-content {
+    @extend %posCenter;
+    top: rem(116);
+
+    .page5-text {
+      margin: rem(32) auto rem(18);
+      @include size(230, 56);
+      @extend %bg-contain;
+      background-image: url(../images/binding-success.png);
+    }
+  }
+  .page5-group {
+    margin: auto;
+    width: rem(266);
+
+    p{
+      margin: 0;
+      text-align: center;
+      font-size: rem(26);
+      color: #d9dada;
+      letter-spacing: 1px;
+    }
+  }
+  .page5-house99 {
+    display: flex;
+
+    .house99 {
+      display: block;
+      @include size(148, 23);
+      @extend %bg-contain;
+      background-image: url(../images/house99.png);
+      padding-top: 15%;
+    }
+  }
+
+  .page5-card {
+    margin: 3% auto 0;
+    @include size(647, 668);
+    @extend %bg-contain;
+    background-image: url(../images/card.png);
+  }
+}
+// page5 end
